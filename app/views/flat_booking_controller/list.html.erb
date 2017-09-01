@@ -1,0 +1,25 @@
+<% if FlatBooking.all.blank? %>
+<p>These are the current bookings in the system.</p>
+<% else %>
+<p>There are no booking in the system</p>
+
+<table id = "books" style= "border: 1px solid white">
+<tr style= "border: 1px solid white">
+<td style= "border: 1px solid white">Booking Title</td>
+<td style= "border: 1px solid white"></td>
+<td style= "border: 1px solid white">Agreement Amount</td>
+<td style= "border: 1px solid white"></td>
+<td style= "border: 1px solid white">Date Of Booking</td>
+<tr style= "border: 1px solid white">
+   <% FlatBooking.all.uniq.each do |c| %>
+   <tr>
+   <td style= "border: 1px solid white"><%= link_to c.title, {:action => 'show', :id => c.id} -%></td>
+   <td style= "border: 1px solid white"></td>
+   <td style= "border: 1px solid white"><%= link_to c.agreement_amount , {:action => 'show', :id => c.id}  %></td>
+   <td style= "border: 1px solid white"></td>
+    <td style= "border: 1px solid white"><%= link_to c.date_of_booking , {:action => 'show', :id => c.id}  %></td>
+   <% end %>
+</tr>
+</table>
+
+<% end %>

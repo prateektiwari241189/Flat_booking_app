@@ -1,0 +1,22 @@
+<h1>Create A New Booking</h1>
+<%= form_tag :action => 'create' do %>
+<p><label for = "flat_booking_title">Title of Booking:</label>
+<%= text_field 'flat_booking', 'title' %></p>
+
+<p><label for = "flat_booking_agreement_amount">Agreement Amount:</label>
+<%= text_field 'flat_booking', 'agreement_amount' %></p>
+
+<p><label for = "flat_booking_date">Date Of Booking:</label>
+<%= date_field 'flat_booking', 'date_of_booking' %></p>
+
+
+<p><label for = "flat_booking_area">Area(Squarefeet):</label>
+<%= text_field 'flat_booking', 'area' %></p>
+
+<p><span>&nbsp;</span><span>&nbsp;</span><label for = "flat_booking_base_price">Base Price:</label><span>&nbsp;</span><span>&nbsp;</span><span>&nbsp;</span><span>&nbsp;</span><span>&nbsp;</span><span>&nbsp;</span><span>&nbsp;</span><span>&nbsp;</span><span>&nbsp;</span>
+<%= text_field 'flat_booking', 'base_price' %></p>
+<%= submit_tag "Create" %>
+
+<% end -%>
+<br/>
+<%= link_to 'Back', {:action => 'list'}%>

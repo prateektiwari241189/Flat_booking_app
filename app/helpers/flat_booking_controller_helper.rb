@@ -1,0 +1,2 @@
+module FlatBookingControllerHelper
+end

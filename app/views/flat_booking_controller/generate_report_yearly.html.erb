@@ -1,0 +1,12 @@
+<h1>Yearly Report</h1>
+
+<p>
+   <strong>Booking year: </strong> <%= @booking_year %><br />
+   <% byebug %>
+   <strong>Agreement Amount:</strong><% @final_array = @total_agreement_amount.reject{|s| s.to_s ==''}%> 
+   <%= @final_array.sum  %><br />
+</p>
+
+<hr />
+
+<%= link_to 'Back', {:action => 'list'} %>

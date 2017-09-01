@@ -1,0 +1,8 @@
+<%= form_tag :action => 'generate_report_yearly' do %>
+<p><label for = "flat_booking_year">Calendar Year:</label>
+<%= text_field 'flat_booking_report', 'year' %></p>
+
+<%= submit_tag "Submit" %>
+
+<% end -%>
+<%= link_to 'Back', {:action => 'list'}%>

@@ -1,0 +1,11 @@
+<h1>Employee Details</h1>
+
+<p>
+   <strong>Booking Title: </strong> <%= @booking.title %><br />
+   <strong>Agreement Amount:</strong> <%= @booking.agreement_amount %><br />
+   <strong>Date Of Booking:</strong> <%= @booking.date_of_booking %><br />
+</p>
+
+<hr />
+
+<%= link_to 'Back', {:action => 'list'} %>
