@@ -2,6 +2,6 @@
 
 <%= render 'form' %>
 
-<%= link_to 'Monthly Report', {:action => 'generate_monthly_report' } %>
-<br/>
-<%= link_to 'Yearly Report', {:action => 'generate_yearly_report'} %>
+<table><tr><td></td><td><%= link_to 'Generate Monthly Report', {:action => 'generate_monthly_report' } %></td></tr>
+
+<tr><td></td><td><%= link_to 'Generate Yearly Report', {:action => 'generate_yearly_report'} %></td></tr></table>
