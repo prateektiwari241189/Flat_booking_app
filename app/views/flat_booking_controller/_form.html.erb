@@ -1,22 +1,36 @@
-<h1>Create A New Booking</h1>
+<h2 style= "text-align: -webkit-auto">Create A New Booking</h2>
 <%= form_tag :action => 'create' do %>
-<p><label for = "flat_booking_title">Title of Booking:</label>
-<%= text_field 'flat_booking', 'title' %></p>
+<table style= "text-align: -webkit-center">
+	<tr>
+		<td>
+<label for = "flat_booking_title">Title of Booking:</label></td>
+<td><%= text_field 'flat_booking', 'title' %></td></tr>
+<tr>
+	<td>
+<label for = "flat_booking_agreement_amount">Agreement Amount:</label></td>
+	<td>
+<%= text_field 'flat_booking', 'agreement_amount' %><td></tr>
+<tr><td>
+<label for = "flat_booking_date">Date Of Booking:</label></td>
+	<td>
+<%= date_field 'flat_booking', 'date_of_booking' %></td></tr>
 
-<p><label for = "flat_booking_agreement_amount">Agreement Amount:</label>
-<%= text_field 'flat_booking', 'agreement_amount' %></p>
+<tr>
+	<td>
+<label for = "flat_booking_area">Area(Squarefeet):</label></td>
+	<td>
+<%= text_field 'flat_booking', 'area' %></td></tr>
+<tr>
+	<td>
+<label for = "flat_booking_base_price">Base Price:</label></td>
 
-<p><label for = "flat_booking_date">Date Of Booking:</label>
-<%= date_field 'flat_booking', 'date_of_booking' %></p>
-
-
-<p><label for = "flat_booking_area">Area(Squarefeet):</label>
-<%= text_field 'flat_booking', 'area' %></p>
-
-<p><span>&nbsp;</span><span>&nbsp;</span><label for = "flat_booking_base_price">Base Price:</label><span>&nbsp;</span><span>&nbsp;</span><span>&nbsp;</span><span>&nbsp;</span><span>&nbsp;</span><span>&nbsp;</span><span>&nbsp;</span><span>&nbsp;</span><span>&nbsp;</span>
-<%= text_field 'flat_booking', 'base_price' %></p>
-<%= submit_tag "Create" %>
-
-<% end -%>
+<td>
+<%= text_field 'flat_booking', 'base_price' %></td></tr>
+<tr><td></td><td>
+<button><%= submit_tag "Create" %></button></td></tr>
 <br/>
-<%= link_to 'Back', {:action => 'list'}%>
+<tr><td></td><td>
+<%= link_to 'Back', {:action => 'list'}%></td></tr>
+<% end -%>
+
+</table>
